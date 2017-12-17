@@ -1,0 +1,15 @@
+//created on: Dec 15, 2017
+package symptomsBased
+
+import com.ajitrisantoso.ItemSymptoms;
+
+rule "Systolic"
+    when
+        //conditions
+        $item : ItemSymptoms (typeofSymptoms == ItemSymptoms.Symptoms.Systolic)
+    then
+        //actions
+        $item.setExpertRec("Terdekat");
+
+end
+

@@ -1,0 +1,12 @@
+//created on: Dec 15, 2017
+package symptomsBased
+
+rule "Premature"
+	when
+        //conditions
+        item : ItemSymptoms (typeofSymptoms == ItemSymptoms.Symptoms.PrematureChildbirth)
+    then
+        //actions
+        item.setExpertRec("Cari RS Terdekat, Ruang Bersalin Tersedia 1,Kamar Bersalin 1");
+end
+
